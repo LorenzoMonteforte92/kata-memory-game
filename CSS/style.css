@@ -14,6 +14,9 @@ body{
     height: calc(100% / 5);
     width: calc(100% / 5);
     border: solid 1px coral;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 header{

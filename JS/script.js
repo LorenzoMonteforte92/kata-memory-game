@@ -11,7 +11,7 @@ let mainContainer = document.querySelector(`#main-container`);
 //dichiarare fuori dal ciclo una variabile per il quadrato
 let randomArray = generatePairNumbers(16, 100)
 let newSquare
-for(let i = 1; i<=randomArray.length; i++ ){
+for(let i = 1; i<=randomArray.length; i++){
     //passare la funzione in un ciclo for per stampare il numero desiderato di box
     newSquare = createGrid(i);
     //appendere in pagina l'elemento generato
@@ -25,7 +25,7 @@ for(let i = 1; i<=randomArray.length; i++ ){
 function createGrid(number) {
     let card = document.createElement('div');
     card.classList.add('box');
-    card.innterHtml += `<span>${number}</span>`
+    card.innerHTML += `<span>${number}</span>`
     return card;
 }
 
