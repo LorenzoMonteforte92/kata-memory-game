@@ -9,11 +9,13 @@
 let mainContainer = document.querySelector(`#main-container`);
 
 //dichiarare fuori dal ciclo una variabile per il quadrato
-let randomArray = generatePairNumbers(16, 100)
+let randomArray = generatePairNumbers(8, 100);
+let shuffledArray = shuffle(randomArray)
+console.log(randomArray);
 let newSquare
-for(let i = 1; i<=randomArray.length; i++){
+for(let i = 0; i<randomArray.length; i++){
     //passare la funzione in un ciclo for per stampare il numero desiderato di box
-    newSquare = createGrid(i);
+    newSquare = createGrid(randomArray[i]);
     //appendere in pagina l'elemento generato
     mainContainer.append(newSquare);
 };
@@ -34,8 +36,24 @@ function generatePairNumbers(numOfPairs, max){
     let pairNumbers = [];
     for(let i = 0; i < numOfPairs; i++){
         let randomNum = Math.floor(Math.random() * max);
-        pairNumbers.push([randomNum, randomNum]);
+        pairNumbers.push(randomNum, randomNum);
     }
     
     return pairNumbers
 }
+
+function shuffle(array) {
+    let currentIndex = array.length;
+  
+    // While there remain elements to shuffle...
+    while (currentIndex != 0) {
+  
+      // Pick a remaining element...
+      let randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+  }
