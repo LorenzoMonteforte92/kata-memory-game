@@ -3,7 +3,7 @@ body{
     background-color: rgba(98, 0, 255, 0.86);
 }
 
-.main-container{
+#main-container{
     margin: 0 auto;
     width: 800px;
     height: 800px;
