@@ -1,8 +1,10 @@
 //stampo in pagina una grid di boxes con un ciclo
 //le box sono associate a numeri e vanno in coppie 
-
-
 //creare una funzione che generi 16 coppie di numeri random
+
+//fare in modo che al click su una casella questa si giri
+//al click passare il numero in un array di controllo
+//se il numero è già presente nell'array allora le card rimangono girate e il counter aggiunge un punto
 
 
 //selezionare e mettere in una variabile il contenitore
@@ -12,6 +14,7 @@ let mainContainer = document.querySelector(`#main-container`);
 let randomArray = generatePairNumbers(8, 100);
 let shuffledArray = shuffle(randomArray)
 console.log(randomArray);
+
 let newSquare
 for(let i = 0; i<randomArray.length; i++){
     //passare la funzione in un ciclo for per stampare il numero desiderato di box
